@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qafiyana - International Instagram Community</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate on Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fce7f3; /* A light pink fallback */
+            overflow-x: hidden;
+        }
+        
+        .font-cursive {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        /* Hearty Background Animation */
+        .heart-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 105, 180, 0.2);
+            transform: rotate(-45deg);
+            animation: float 15s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 105, 180, 0.2);
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -15px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 15px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(-45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) rotate(-45deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Glassmorphism effect for cards */
+        .glass-card {
+             background: rgba(255, 255, 255, 0.2);
+             backdrop-filter: blur(10px);
+             -webkit-backdrop-filter: blur(10px);
+             border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Special Owner Card Style */
+        .owner-card {
+            background: linear-gradient(135deg, rgba(252, 211, 77, 0.3), rgba(217, 119, 6, 0.3));
+            border: 1px solid rgba(252, 211, 77, 0.5);
+            transform: scale(1.05); /* Make it slightly larger */
+        }
+
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Heart background container -->
+    <div class="heart-container" id="heart-bg"></div>
+
+    <div class="relative z-10">
+        <!-- Header -->
+        <header class="p-4 md:p-6">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="https://scontent.fdel72-1.fna.fbcdn.net/v/t1.15752-9/541300879_669900199455933_7080331778505228380_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=35d436&_nc_ohc=ifBhbmvBN0cQ7kNvwEnY22N&_nc_oc=AdmlfJDR0aNZXvrAupvIfBbS-pw-5zdcdX97C9mYsokY6lL2YHfpAwhJ1gIROp8lS7U&_nc_zt=23&_nc_ht=scontent.fdel72-1.fna&oh=03_Q7cD3QHF5FSDJaxZcJg-Tcdgqm-oz4aInyLRUTY7ezApAE-NHw&oe=68F7A462" alt="Qafiyana Logo" class="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-pink-300 shadow-md">
+                    <div>
+                        <h1 class="font-cursive text-3xl md:text-5xl font-bold text-pink-600">Qafiyana</h1>
+                        <p class="text-xs md:text-sm font-medium text-pink-500 mt-1 ml-1">Since 2023</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section id="hero" class="text-center py-20 px-4" data-aos="fade-up">
+                <div class="container mx-auto">
+                    <h1 class="font-cursive text-5xl md:text-7xl font-bold text-black-700 leading-tight mb-5">
+                        Meet New Friends, Find Your Vibe.
+                    </h1>
+                    <p class="text-lg md:text-xl text-pink-800 max-w-2xl mx-auto mb-8">
+                        Welcome to Qafiyana, a global family where strangers become friends and friends become family. Discover cultures, share stories, and create unforgettable memories.
+                    </p>
+                    <a href="https://ig.me/j/Abb83_iybfa2dUq6" target="_blank" class="bg-pink-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-pink-600 transition-all duration-300 shadow-lg transform hover:scale-105">
+                        Join Qafiyana
+                    </a>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="py-20 px-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="container mx-auto max-w-4xl text-center">
+                    <div class="glass-card p-8 md:p-12 rounded-2xl shadow-xl">
+                        <h3 class="font-cursive text-4xl md:text-5xl font-bold text-pink-800 mb-4">About Qafiyana</h3>
+                        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                            Qafiyana is one of the rarest & unique International random GC on Instagram. People from different cultures, places, and countries meet & talk. The friendly environment of Qafiyana makes it more engaging, hence the best place for finding your true love, making lifelong friends, or simply having a great conversation
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Eligibility Section -->
+            <section id="eligibility" class="py-20 px-4 bg-white/30" data-aos="fade-up" data-aos-delay="100">
+                <div class="container mx-auto text-center">
+                    <h3 class="font-cursive text-4xl md:text-5xl font-bold text-pink-800 mb-10">Who Can Join?</h3>
+                    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                        <div class="glass-card p-8 rounded-2xl shadow-lg text-center">
+                            <div class="text-5xl text-pink-500 mb-4">💬</div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Language</h4>
+                            <p class="text-gray-600">You must be able to speak and understand Hindi or English.</p>
+                        </div>
+                        <div class="glass-card p-8 rounded-2xl shadow-lg text-center">
+                            <div class="text-5xl text-pink-500 mb-4">💖</div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Be Respectful</h4>
+                            <p class="text-gray-600">A polite and friendly attitude is a must. We maintain a safe space for everyone.</p>
+                        </div>
+                        <div class="glass-card p-8 rounded-2xl shadow-lg text-center">
+                            <div class="text-5xl text-pink-500 mb-4">🎂</div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Age Requirement</h4>
+                            <p class="text-gray-600">Members must be 15 years old or above to join the community.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Group Admins Section -->
+            <section id="admins" class="py-20 px-4" data-aos="fade-left" data-aos-delay="100">
+                <div class="container mx-auto text-center">
+                    <h3 class="font-cursive text-4xl md:text-5xl font-bold text-pink-800 mb-12">Meet The Admins</h3>
+                    <div id="admins-container" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-center">
+                        <!-- Other admin cards will be injected here by JavaScript -->
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Core Members Section -->
+            <section id="members" class="py-20 px-4 bg-white/30" data-aos="fade-right" data-aos-delay="100">
+                <div class="container mx-auto text-center">
+                    <h3 class="font-cursive text-4xl md:text-5xl font-bold text-pink-800 mb-12">Our Core Members</h3>
+                    <div id="members-container" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center">
+                        <!-- Member cards will be injected here by JavaScript -->
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CTA Section -->
+            <section id="join" class="py-20 px-4 text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="container mx-auto max-w-3xl">
+                     <div class="glass-card p-8 md:p-12 rounded-2xl shadow-xl">
+                        <h3 class="font-cursive text-4xl md:text-5xl font-bold text-pink-800 mb-4">Ready to Join Us?</h3>
+                        <p class="text-lg text-gray-700 mb-8">
+                            Click the button below to head to our Instagram page and send a join request. We can't wait to meet you!
+                        </p>
+                        <a href="https://ig.me/j/Abb83_iybfa2dUq6" target="_blank" class="bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold py-4 px-10 rounded-full text-xl hover:from-pink-600 hover:to-rose-600 transition-all duration-300 shadow-xl transform hover:scale-105 inline-flex items-center justify-center space-x-2">
+                            <span>Request to join</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="text-center py-6 px-4">
+            <p class="text-pink-800/80">&copy; 2024 Qafiyana Community. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="members.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 800, // values from 0 to 3000, with step 50ms
+                once: true, // whether animation should happen only once - while scrolling down
+            });
+
+            // Set the Cloudflare worker URL
+            const workerUrl = 'https://qafiyana.hackerinsiderahil.workers.dev';
+            const fallbackImageUrl = 'https://placehold.co/400x400/f871b5/ffffff?text=Q';
+
+            // --- FUNCTION TO CREATE AND RENDER CARDS ---
+            function renderCards(containerId, data, isLargeCard = false) {
+                const container = document.getElementById(containerId);
+                if (!container) return;
+
+                const cardsHTML = data.map(person => {
+                    const dynamicImageUrl = `${workerUrl}/${person.instaHandle}`;
+                    const cardClass = isLargeCard ? 'p-6' : 'p-4';
+                    const imageSize = isLargeCard ? 'w-32 h-32' : 'w-24 h-24';
+                    const nameSize = isLargeCard ? 'text-2xl' : 'text-xl';
+                    
+                    const tagHTML = person.tag ?
+                        `<div class="bg-gradient-to-r from-amber-500 to-yellow-400 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-2xl absolute top-0 right-0 shadow-md">${person.tag}</div>`
+                        : '';
+
+                    return `
+                        <div class="glass-card ${cardClass} rounded-2xl shadow-lg transform transition-transform duration-300 hover:-translate-y-2 flex flex-col items-center relative">
+                            ${tagHTML}
+                            <img src="${dynamicImageUrl}" alt="${person.name}" class="${imageSize} rounded-full mb-4 border-4 border-white/50 shadow-md" onerror="this.onerror=null;this.src='${fallbackImageUrl}';">
+                            <h4 class="${nameSize} font-semibold text-gray-800">${person.name}</h4>
+                            <a href="https://instagram.com/${person.instaHandle}" target="_blank" class="text-pink-600 hover:text-pink-800 transition-colors">
+                                @${person.instaHandle}
+                            </a>
+                        </div>
+                    `;
+                }).join('');
+
+                container.insertAdjacentHTML('beforeend', cardsHTML);
+            }
+
+            // --- RENDER ADMIN AND MEMBER CARDS ---
+            function initializeTeamSections() {
+                if (typeof admins !== 'undefined' && typeof members !== 'undefined') {
+                    renderCards('admins-container', admins, true);
+                    renderCards('members-container', members, false);
+                } else {
+                    console.error('Error: admins or members data not found. Make sure members.js is loaded correctly.');
+                }
+            }
+
+            initializeTeamSections();
+
+            // --- CREATE FLOATING HEARTS FOR BACKGROUND ---
+            const heartBg = document.getElementById('heart-bg');
+            const numberOfHearts = 20;
+            for (let i = 0; i < numberOfHearts; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.style.left = `${Math.random() * 100}vw`;
+                heart.style.animationDuration = `${Math.random() * 10 + 10}s`;
+                heart.style.animationDelay = `${Math.random() * 5}s`;
+                heartBg.appendChild(heart);
+            }
+        });
+    </script>
+</body>
+</html>
+
