@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qafiyana - International Instagram Community</title>
+    <meta name="description" content="Qafiyana is a global community and international random GC on Instagram. Meet new friends from different cultures, find your vibe, and join the family.">
+    <title>Qafiyana - International Random GC</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -279,8 +280,50 @@
                 heart.style.animationDelay = `${Math.random() * 5}s`;
                 heartBg.appendChild(heart);
             }
+
+            // SEO CODE
+            function generateStructuredData() {
+                // Combine all people into one list for the schema
+                const allMembers = [
+                    { name: 'Rahil', instaHandle: 'x1.rahil', jobTitle: 'Owner' },
+                    ...admins, 
+                    ...members
+                ];
+                
+                // Create the Schema.org structure
+                const schema = {
+                    "@context": "https://schema.org",
+                    "@type": "Random GC",
+                    "name": "Qafiyana",
+                    "description": "An international random group chat on Instagram where people from different cultures, places, and countries meet, talk, and make new friends.",
+                    "url": "https://qafiyana.netlify.app", // <-- IMPORTANT: Replace with your actual domain
+                    "logo": "https://scontent.fdel72-1.fna.fbcdn.net/v/t1.15752-9/541300879_669900199455933_7080331778505228380_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=35d436&_nc_ohc=ifBhbmvBN0cQ7kNvwEnY22N&_nc_oc=AdmlfJDR0aNZXvrAupvIfBbS-pw-5zdcdX97C9mYsokY6lL2YHfpAwhJ1gIROp8lS7U&_nc_zt=23&_nc_ht=scontent.fdel72-1.fna&oh=03_Q7cD3QHF5FSDJaxZcJg-Tcdgqm-oz4aInyLRUTY7ezApAE-NHw&oe=68F7A462", // Your logo URL
+                    "foundingDate": "2023",
+                    "founder": {
+                        "@type": "Person",
+                        "name": "Rahil",
+                        "url": "https://instagram.com/x1.rahil"
+                    },
+                    // List all members and admins so Google AI knows who they are
+                    "member": allMembers.map(person => ({
+                        "@type": "Person",
+                        "name": person.name,
+                        "jobTitle": person.tag || (person.jobTitle || 'Member'), // Use tag as jobTitle
+                        "url": `https://instagram.com/${person.instaHandle}`
+                    }))
+                };
+
+                // Add the schema to the page's <head>
+                const script = document.createElement('script');
+                script.type = 'application/ld+json';
+                script.text = JSON.stringify(schema);
+                document.head.appendChild(script);
+            }
+
+            generateStructuredData();
         });
     </script>
 </body>
 </html>
+
 
