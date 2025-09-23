@@ -1,7 +1,7 @@
 const admins = [
     { name: 'Rahil', instaHandle: 'x1.rahil', tag: 'Owner' },
     { name: 'Ashhar', instaHandle: 'x0.ash__', tag : 'Co-Owner' },
-    { name: 'Noor', instaHandle: 'nxoor.__', tag: 'Moderator' }
+    { name: 'Noor', instaHandle: 'nxoor.__', tag: 'Moderator' },
 ];
 
 const members = [
@@ -19,8 +19,9 @@ const members = [
     { name: 'Sohail', instaHandle: 'x._aladin_.x'},
     { name: 'Zainab', instaHandle: 'it_me_queen00o2' },
     { name: 'Bilal', instaHandle: 'bilalkhalil3' },
-    { name: 'Zaman', instaHandle: 'shaahezaman_' },
+    { name: 'Zaman', instaHandle: 'shaahezaman_',tag : 'Designer'},
     { name: 'Fatima', instaHandle: 'chatpatygolgapyy' , tag : 'Doctor'},
     { name: 'Taskeef', instaHandle: 'taskeef_kaisar'}
 ];
+
 
